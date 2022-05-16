@@ -1,0 +1,39 @@
+create or replace PROCEDURE BOOK (Dest_location in VARCHAR2 ,hotel_name in VARCHAR2, duration_stay in NUMBER,total_price OUT NUMBER)
+
+AS
+BEGIN
+  select fc.price* duration_stay
+  into total_price
+  from admin1 fc 
+  where fc.hname = hotel_name and fc.hlocation = dest_location;
+END BOOK;
+
+
+
+
+
+
+create or replace procedure FILTER_HOTELS_PRICE
+(LOWER in number ,UPPER in number, CID out sys_refcursor)
+as
+begin
+open CID for
+select h.HNAME,h.HLOCATION, h.PRICE, h.RATING
+from admin1 h
+where h.PRICE BETWEEN lower and upper;
+end;
+
+
+
+
+
+
+create or replace procedure FILTER_HOTELS_RATING
+(LOWER in number ,UPPER in number, CID out sys_refcursor)
+as
+begin
+open CID for
+select h.HNAME,h.HLOCATION, h.PRICE, h.RATING
+from admin1 h
+where h.RATING BETWEEN lower and upper;
+end;

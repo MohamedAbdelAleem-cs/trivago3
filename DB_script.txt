@@ -1,0 +1,46 @@
+
+Create Sequence H_ID ;
+Drop table admin1  cascade constraints;
+
+Drop table Usr cascade constraints;
+
+
+Create table admin1
+ (	H_ID NUMBER(10) primary key, 
+	Hname VARCHAR2(20 BYTE), 
+	Hlocation VARCHAR2(20 BYTE), 
+	Offer NUMBER(2), 
+	Price number(5)
+   ) ;
+   
+
+   
+    CREATE TABLE Usr 
+   (	
+	Name_ VARCHAR2(20 BYTE), 
+	Email_ VARCHAR2(20 BYTE)primary key, 
+--	DOB DATE, 
+	Pssword_ VARCHAR2(20 BYTE)
+   );
+   
+   insert into Usr values
+( 'Galall', 'admin', 'admin');
+
+   insert into Usr values
+( 'Galall1', 'admin1', 'admin');
+   insert into Usr values
+( 'Galall2', 'admin2', 'admin');
+   insert into Usr values
+( 'Galall moh', 'admin3', 'admin');
+ insert into Usr values
+( 'Ga', '567', '123');
+INSERT INTO ADMIN1 VALUES (1, 'Hapi Hotel','Aswan', 0, 530, 4);
+INSERT INTO ADMIN1 VALUES (2, 'Sofitel Legend','Aswan', 0, 2977, 5);
+INSERT INTO ADMIN1 VALUES (3, 'Citymax Hotel','Aswan',10, 1295, 4);
+INSERT INTO ADMIN1 VALUES (4, 'Marriott Mena House', 'Giza', 0, 4786, 5);
+INSERT INTO ADMIN1 VALUES (5, 'Four Seasons Hotel', 'Giza', 15, 4250, 5);
+INSERT INTO ADMIN1 VALUES (6, 'Tolip Hotel', 'Alexandria', 0, 1571, 4);
+INSERT INTO ADMIN1 VALUES (7, 'Steigenberger Hotel', 'Cairo', 0, 2348, 5);
+INSERT INTO ADMIN1 VALUES (8, 'Kempinski Hotel', 'Cairo', 0, 4030, 5);
+INSERT INTO ADMIN1 VALUES (9, 'Ramses Hilton', 'Cairo', 0, 3022, 5);
+INSERT INTO ADMIN1 VALUES (10, 'Kempinski Hotel', 'Cairo', 10, 2975, 5);
